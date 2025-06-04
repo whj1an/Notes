@@ -4,11 +4,11 @@
 >
 > **substring**
 >
->  without repeating characters.
+> without repeating characters.
 >
 > 
 >
->  
+> 
 >
 > **Example 1:**
 >
@@ -34,6 +34,8 @@
 > Explanation: The answer is "wke", with the length of 3.
 > Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 > ```
+
+### Solution
 
 ```python
 class Solution(object):
@@ -81,6 +83,10 @@ class Solution(object):
 > Output: ""
 > Explanation: There is no common prefix among the input
 > ```
+
+### Solutions
+
+Python:
 
 ```python
 class Solution(object):
@@ -142,6 +148,12 @@ class Solution(object):
 >
 > - `1 <= s.length <= 104`
 > - `s` consists of parentheses only `'()[]{}'`.
+
+
+
+### Solution
+
+Python
 
 ```python
 class slotion(object):
@@ -217,6 +229,21 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 
 
+### Solution
+
+
+
+```java
+```
+
+
+
+
+
+
+
+
+
 ## 5. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 Given a string `s`, return *the longest* *palindromic* *substring* in `s`.
@@ -244,6 +271,8 @@ Output: "bb"
 
 - `1 <= s.length <= 1000`
 - `s` consist of only digits and English letters.
+
+### Solutions
 
 Java:
 
@@ -307,3 +336,56 @@ int main() {
 }
 ```
 
+## [6. Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/)
+
+The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+
+```
+P   A   H   N
+A P L S I I G
+Y   I   R
+```
+
+And then read line by line: `"PAHNAPLSIIGYIR"`
+
+Write the code that will take a string and make this conversion given a number of rows:
+
+```
+string convert(string s, int numRows);
+```
+
+ 
+
+**Example 1:**
+
+```
+Input: s = "PAYPALISHIRING", numRows = 3
+Output: "PAHNAPLSIIGYIR"
+```
+
+**Example 2:**
+
+```
+Input: s = "PAYPALISHIRING", numRows = 4
+Output: "PINALSIGYAHRPI"
+Explanation:
+P     I    N
+A   L S  I G
+Y A   H R
+P     I
+```
+
+**Example 3:**
+
+```
+Input: s = "A", numRows = 1
+Output: "A"
+```
+
+ 
+
+**Constraints:**
+
+- `1 <= s.length <= 1000`
+- `s` consists of English letters (lower-case and upper-case), `','` and `'.'`.
+- `1 <= numRows <= 1000`
