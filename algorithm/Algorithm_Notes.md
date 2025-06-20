@@ -6,10 +6,6 @@
 >
 > without repeating characters.
 >
-> 
->
-> 
->
 > **Example 1:**
 >
 > ```
@@ -36,7 +32,33 @@
 > ```
 
 ### Solution
+c++
+```cpp
 
+```
+
+java
+```java
+import java.util.HashMap;  
+import java.util.Map;  
+  
+public class Solution {  
+    public int[] twoSum(int[] nums, int target) {  
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();  
+  
+        for (int i = 0; i < nums.length; i++) {  
+            int comp = target - nums[i];  
+            if (map.containsKey(comp)) {  
+                return new int[]{map.get(comp), i};  
+            }  
+            map.put(nums[i], i);  
+        }  
+        return null;  
+    }  
+}
+```
+
+python
 ```python
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
@@ -85,6 +107,15 @@ class Solution(object):
 > ```
 
 ### Solutions
+java
+
+```java
+class Solution {
+	public ListNode addTwoNumbers(ListNode l1, lListNode l2){
+		
+	}
+}
+```
 
 Python:
 
@@ -389,3 +420,4 @@ Output: "A"
 - `1 <= s.length <= 1000`
 - `s` consists of English letters (lower-case and upper-case), `','` and `'.'`.
 - `1 <= numRows <= 1000`
+
