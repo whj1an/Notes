@@ -1,3 +1,78 @@
+## 1. Two Sum
+Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
+
+You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice.
+
+You can return the answer in any order.
+
+**Example 1:**
+
+**Input:** nums = [2,7,11,15], target = 9
+**Output:** [0,1]
+**Explanation:** Because nums[0] + nums[1] == 9, we return [0, 1].
+
+**Example 2:**
+
+**Input:** nums = [3,2,4], target = 6
+**Output:** [1,2]
+
+**Example 3:**
+
+**Input:** nums = [3,3], target = 6
+**Output:** [0,1]
+
+**Constraints:**
+
+- `2 <= nums.length <= 104`
+- `-109 <= nums[i] <= 109`
+- `-109 <= target <= 109`
+- **Only one valid answer exists.**
+
+Python Solution:
+
+
+Java Solution:
+1.
+```java
+// bad solution
+class Solution {
+	public int[] twoSum(int [] nums, int target) {
+		int[] result = new int[2];
+		for(int i = 0; i < nums.lenth; i++){
+			for (int j = i + 1; j < nums.length; j++){
+				if (nums[i] + nums[j] = target) {
+					result[0] = i;
+					result[1] = j;
+					return result;
+				}
+			}
+		}
+	}
+	return result;
+}
+```
+2.
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i = 0; i < nums.length; i++) {
+            int comp = target - nums[i];
+            if (map.containsKey(comp)) {
+                return new int[]{map.get(comp), i};
+            }
+            map.put(nums[i], i);
+        }
+        return null;
+    }
+
+}
+```
+
+
 ## (M) 3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 > Given a string `s`, find the length of the **longest** 
@@ -42,7 +117,7 @@ java
 import java.util.HashMap;  
 import java.util.Map;  
   
-public class Solution {  
+public class Solution {
     public int[] twoSum(int[] nums, int target) {  
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();  
   
@@ -421,3 +496,33 @@ Output: "A"
 - `s` consists of English letters (lower-case and upper-case), `','` and `'.'`.
 - `1 <= numRows <= 1000`
 
+Python Solution:
+
+```python
+class Solution(object):
+
+    def convert(self, s, numRows):
+        """
+        :type s: str
+        :type numRows: int
+        :rtype: str
+        """
+        # 如果只要给出一行，那么直接输出，如果要求行数比总字数多，也直接输出
+        if numRows == 1 or numRows >= len(s):
+            return s
+
+		# 创建numRows个子列
+        subRows = [''] * numRows
+        cur_row = 0 # 初始化当前行为0
+        going_down = False # 判断是否换行
+
+        for c in s:
+            subRows[cur_row] += c
+            
+            if cur_row == 0 or cur_row == numRows - 1:
+                going_down = not going_down
+  
+            cur_row += 1 if going_down else -1
+
+        return "".join(subRows)
+```
