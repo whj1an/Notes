@@ -28,6 +28,7 @@ You can return the answer in any order.
 - `-109 <= target <= 109`
 - **Only one valid answer exists.**
 
+### Solutions
 Python Solution:
 
 
@@ -72,8 +73,64 @@ public class Solution {
 }
 ```
 
+==Main==
 
-## (M) 3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+```java
+package q1_twosum;  
+  
+import java.util.Arrays;  
+
+/**
+因为上面Solution方法不是static类型，所以在测试时需要实例化
+*/
+public class Main {  
+    public static void main(String[] args) {  
+        int[] nums = {1, 2, 4, 11, 3};  
+        int target = 3;  
+  
+        Solution sol = new Solution();  
+        int[] result = sol.twoSum(nums, target);  
+        System.out.println(Arrays.toString(result));  
+    }  
+}
+```
+
+
+## 2. Add Two Numbers
+You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in **reverse order**, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg)
+
+**Input:** l1 = [2,4,3], l2 = [5,6,4]
+**Output:** [7,0,8]
+**Explanation:** 342 + 465 = 807.
+
+**Example 2:**
+
+**Input:** l1 = [0], l2 = [0]
+**Output:** [0]
+
+**Example 3:**
+
+**Input:** l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+**Output:** [8,9,9,9,0,0,0,1]
+
+
+### Solutions
+Java Solution
+```java
+class Solution{
+	public 
+}
+```
+
+
+
+## 3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 > Given a string `s`, find the length of the **longest** 
 >
