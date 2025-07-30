@@ -30,11 +30,10 @@ You can return the answer in any order.
 
 Python Solution:
 
-
 Java Solution:
 1.
 ```java
-// bad solution
+// solution but will be overtime
 class Solution {
 	public int[] twoSum(int [] nums, int target) {
 		int[] result = new int[2];
@@ -107,10 +106,6 @@ public class Solution {
 > ```
 
 ### Solution
-c++
-```cpp
-
-```
 
 java
 ```java
